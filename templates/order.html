@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .order-item {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .checkout-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Order Confirmation</h1>
+    <form action="/submit" method="post">
+        {% for item in order_items %}
+            <div class="order-item">
+                <input type="checkbox" id="item_{{ item.id }}" name="menu_item" value="{{ item.id }}" checked>
+                <label for="item_{{ item.id }}">{{ item.name }} - ${{ item.price }}</label>
+            </div>
+        {% endfor %}
+        <div class="order-total">
+            <strong>Total Price: ${{ total_price }}</strong>
+        </div>
+        <button onclick="checkoutClicked()" class="checkout-btn" type="submit">Checkout</button>
+    </form>
+</body>
+
+</html>

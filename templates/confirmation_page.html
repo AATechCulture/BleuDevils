@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation and Ticket Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1507812984078-917a274065be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YWlycGxhbmV8fHx8fHwxNjk5MTY1MzMy&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: white;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function redirectToPage() {
+            var input = document.getElementById("confirmation").value;
+            if (input === "DL1234") {
+                window.location.href = "/menuDelta";
+            } else if (input === "AA1234") {
+                window.location.href = "/menuAA";
+            } else if (input === "AS1234") {
+                window.location.href = "/menuAlaska";
+            } else if (input === "G41234") {
+                window.location.href = "/menuAllegiant";
+            } else if (input === "BA1234") {
+                window.location.href = "/menuBritish";
+            } else if (input === "F91234") {
+                window.location.href = "/menuFrontier";
+            } else if (input === "NK1234") {
+                window.location.href = "/menuSpirit";
+            } else {
+                // Redirect to a default page for other input values
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <label for="confirmation">Confirmation/Ticket#:</label><br>
+        <input type="text" id="confirmation" name="confirmation" required><br><br>
+
+        <input type="button" value="Submit" onclick="redirectToPage()">
+    </form>
+
+</body>
+
+</html>

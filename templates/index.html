@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirDine</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://i.pinimg.com/originals/aa/72/a0/aa72a0ace0414f0d6b0c32616c24ae30.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            margin-right: 200px;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .airline-button {
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .airline-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .airline-button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 600px;
+        }
+
+        .column {
+            flex: 0 0 50%;
+            text-align: center;
+        }
+        .airline-button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle; /* Center the icons vertically */
+        }
+
+        .airline-button span {
+            vertical-align: middle; /* Center the button text vertically */
+        }
+        .airline-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+            margin-top: 20px;
+            text-align: left;
+            width: 200px; /* Set a fixed width for the buttons */
+        }
+
+
+        .airline-button img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .airline-button span {
+            vertical-align: middle;
+        }   
+    </style>
+</head>
+
+ <body>
+    <h1>AirDine</h1>
+    <h2>Welcome to our Food Ordering App!</h2>
+        <h3><b><label for="airlines">Choose Your Airline:</label></b></h3>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <p><strong>Popular Airlines</strong></p>
+            <button class="airline-button" onclick="buttonClicked('American Airlines')">
+                <img src="https://i.pinimg.com/originals/fb/95/dc/fb95dc7e8967f9561ca010899cc2d028.png" alt="American Airlines">
+                American Airlines
+            </button>
+            <button class="airline-button" onclick="buttonClicked('Delta Airlines')">
+                <img src="https://i.pinimg.com/originals/21/22/e4/2122e45a127fc725f98f0f8938c1cfa7.png" alt="Delta Airlines">
+                Delta Airlines
+            </button>
+            <button class="airline-button" onclick="buttonClicked('Southwest Airlines')">
+                <img src="https://i.pinimg.com/originals/9c/e4/f5/9ce4f56d5a9a0c9ac42aefa6031db849.png" alt="Southwest Airlines">
+                Southwest Airlines
+            </button>
+            <button class="airline-button" onclick="buttonClicked('Spirit Airlines')">
+                <img src="https://i.pinimg.com/originals/8b/78/f9/8b78f9739b8518f5b9a59087deeb7368.png" alt="Spirit Airlines">
+                Spirit Airlines
+            </button>
+        </div>
+
+        <div class="column">
+            <p><strong>Other Airlines</strong></p>
+            <button class="airline-button" onclick="buttonClicked('Frontier Airlines')">
+                <img src="https://i.pinimg.com/originals/d4/08/63/d40863b68ef1c65264aacd9eb83a1179.png" alt="Frontier Airlines">
+                Frontier Airlines
+            </button>
+            <button class="airline-button" onclick="buttonClicked('Alaska Airlines')">
+                <img src="https://i.pinimg.com/originals/e5/55/15/e55515e6972947fd447f57bc50e7f63b.png" alt="Alaska Airlines">
+                Alaska Airlines
+            </button>
+            <button class="airline-button" onclick="buttonClicked('British Airways')">
+                <img src="https://i.pinimg.com/originals/23/79/34/237934cb17311090604433773d27b4c8.png" alt="British Airways">
+                British Airways
+            </button>
+            <button class="airline-button" onclick="buttonClicked('Allegiant Airways')">
+                <img src="https://i.pinimg.com/originals/88/7c/dd/887cdd71c337a59dfdf909ecbe1ad4f1.png" alt="Allegiant Airways">
+                Allegiant Airways
+            </button>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
