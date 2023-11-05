@@ -82,7 +82,9 @@ def translate():
 
 selected_menu_items = []
 
-# # Configure Braintree API credentials (replace with your actual credentials)
+
+
+# Configure Braintree API credentials (replace with your actual credentials)
 # braintree.Configuration.configure(
 #     braintree.Environment.Sandbox,
 #     merchant_id='jjhycvgsf33h3hzv',
@@ -96,6 +98,9 @@ selected_menu_items = []
 
 # @app.route('/client_token', methods=['GET'])
 # def generate_client_token():
+
+
+
 #     client_token = braintree.ClientToken.generate()
 #     return jsonify({'client_token': client_token})
 
@@ -110,10 +115,7 @@ selected_menu_items = []
 #         }
 #     })
 
-#     if result.is_success:
-#         return jsonify({'success': True, 'message': 'Payment successful'})
-#     else:
-#         return jsonify({'success': False, 'message': 'Payment failed'})
+ 
 
 
 @app.route('/submit', methods=['POST'])
